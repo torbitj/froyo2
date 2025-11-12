@@ -11,4 +11,13 @@ const orderSummary = flavorsArray.reduce((orderFlavors, flavor) => {
   return orderFlavors;
 }, {});
 
-console.log(orderSummary)
+const displayOrderResults = (object) => {
+  const flavorsObj = object;
+
+  console.log(`The flavors you ordered are:`)
+  for (flavor in flavorsObj) {
+    console.log(`${flavor}: ${flavorsObj[flavor]}`)
+  }
+}
+
+displayOrderResults(orderSummary);
