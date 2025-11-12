@@ -2,11 +2,13 @@ const userOrderInput = prompt(`What flavors of froyo would you like?`);
 const flavorsArray = userOrderInput.split(`,`);
 
 const orderSummary = flavorsArray.reduce((orderFlavors, flavor) => {
-  const currentFlavor = orderFlavors[flavor];
-  if (currentFlavor === undefined) {
-    currentFlavor = 1;
+  if (orderFlavors[flavor] === undefined) {
+    orderFlavors[flavor] = 1;
   }
   else {
-    currentFlavor++;
+    orderFlavors[flavor]++;
   }
+  return orderFlavors;
 }, {});
+
+console.log(orderSummary)
