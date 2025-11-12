@@ -19,3 +19,5 @@ const displayOrderResults = (object) => {
     console.log(`${flavor}: ${flavorsObj[flavor]}`)
   }
 }
+
+displayOrderResults(orderSummary);
